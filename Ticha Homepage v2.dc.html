@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#FAF9F7;font-family:"IBM Plex Sans Thai",system-ui,sans-serif;color:#302E2A}
+a{color:#2D574B;text-decoration:none}
+a:hover{color:#1A332B}
+</style>
+</helmet>
+
+<div style="background:#FAF9F7;font-size:17px;line-height:1.8">
+
+<div style="background:#11221D;color:#BCD1CA;font-size:13px;letter-spacing:.02em">
+
+</div>
+
+<header style="position:sticky;top:0;z-index:40;background:#FAF9F7;border-bottom:1px solid #E4E2DC">
+<div style="max-width:1320px;margin:0 auto;padding:14px 40px;display:flex;align-items:center;justify-content:space-between;gap:32px">
+<a href="#top" style="display:flex;align-items:center;gap:13px;text-decoration:none;flex:0 0 auto">
+<img src="assets/ticha-logo-dark.png" alt="Ticha Clinic" style="display:block;height:40px;width:auto;flex:0 0 auto">
+</a>
+<nav style="display:flex;flex-wrap:wrap;gap:10px 24px;font-size:16px;font-weight:500;color:#47443E;min-width:0">
+<a href="#services" style="color:#47443E;white-space:nowrap">บริการทั้งหมด</a>
+<a href="#about" style="color:#47443E;white-space:nowrap">เกี่ยวกับเรา</a>
+<a href="#doctors" style="color:#47443E;white-space:nowrap">ทีมแพทย์</a>
+<a href="#reviews" style="color:#47443E;white-space:nowrap">รีวิว</a>
+<a href="#promotions" style="color:#47443E;white-space:nowrap">โปรโมชัน</a>
+<a href="#journal" style="color:#47443E;white-space:nowrap">บทความ</a>
+<a href="#branches" style="color:#47443E;white-space:nowrap">สาขา</a>
+</nav>
+<div style="display:flex;align-items:center;gap:12px;flex:0 0 auto">
+<a href="#book" style="font-size:15px;font-weight:500;min-height:44px;display:inline-flex;align-items:center;padding:0 18px;border-radius:999px;border:1px solid #CDCAC2;color:#302E2A;white-space:nowrap;flex:0 0 auto" style-hover="background:#F2F1ED;color:#1A332B">02-000-0000</a>
+<a href="#book" style="font-size:15px;font-weight:500;min-height:44px;display:inline-flex;align-items:center;padding:0 22px;border-radius:999px;background:#1A332B;color:#F1F5F3;white-space:nowrap;flex:0 0 auto;gap:9px" style-hover="background:#11221D;color:#fff"><img src="assets/line-logo.webp" alt="LINE" style="width:22px;height:22px;display:block;flex:0 0 auto">{{ ctaLabel }}</a>
+</div>
+</div>
+</header>
+
+<section style="position:relative;background:#11221D;overflow:hidden">
+<img src="img/hero.png" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:70% 40%">
+<div style="position:absolute;inset:0;background:linear-gradient(118deg,rgba(7,19,15,.82) 0%,rgba(15,38,32,.6) 30%,rgba(28,68,56,.34) 58%,rgba(47,100,85,.2) 80%,rgba(76,132,116,.14) 100%)"></div>
+<div style="position:absolute;inset:0;background:radial-gradient(70% 60% at 86% 6%, rgba(230,214,157,.26) 0%, rgba(192,174,99,.12) 38%, rgba(17,34,29,0) 72%),radial-gradient(60% 70% at 12% 104%, rgba(124,169,155,.28) 0%, rgba(26,51,43,0) 68%),radial-gradient(90% 70% at 50% 0%, rgba(255,255,255,.08) 0%, rgba(255,255,255,0) 60%)"></div>
+<div style="position:relative;background:linear-gradient(100deg,rgba(7,19,15,.8) 0%,rgba(12,33,27,.5) 40%,rgba(20,48,40,.14) 70%,rgba(20,48,40,0) 100%)">
+<div style="max-width:1320px;margin:0 auto;padding:124px 40px 132px">
+<div>
+<h1 style="font-family:'IBM Plex Sans Thai',sans-serif;font-weight:600;font-size:60px;letter-spacing:-.01em;line-height:1.26;margin:0 0 20px;color:#FFFFFF;max-width:22ch;text-wrap:pretty">คลีนิคเสริมความงาม&nbsp;<br>เฉพาะทางด้านปรับรูปหน้า</h1>
+<p style="margin:0 0 36px;font-size:19px;line-height:1.8;color:#BCD1CA;max-width:46ch;text-wrap:pretty">แพทย์วิเคราะห์โครงหน้าและสภาพผิวรายบุคคล ก่อนวางแผนหัตถการฟิลเลอร์ โบทูลินัมท็อกซิน และการดูแลผิวที่เหมาะกับคุณจริง ๆ</p>
+<div style="display:flex;gap:14px;flex-wrap:wrap">
+<a href="#book" style="font-size:17px;font-weight:500;min-height:54px;display:inline-flex;align-items:center;padding:0 30px;border-radius:999px;background:#FFFFFF;color:#11221D" style-hover="background:#F1F5F3;color:#11221D">ปรึกษาและนัดหมายแพทย์</a>
+<a href="#book" style="font-size:17px;font-weight:500;min-height:54px;display:inline-flex;align-items:center;padding:0 28px;border-radius:999px;border:1px solid #628F82;color:#FFFFFF;gap:9px" style-hover="background:#2D574B;color:#fff"><img src="assets/line-logo.webp" alt="LINE" style="width:20px;height:20px;display:block;flex:0 0 auto">สอบถามทางไลน์</a>
+</div>
+</div>
+</div>
+</div>
+</section></div>
+
+
+<section id="about" style="background:#FAF9F7">
+<div style="max-width:1320px;margin:0 auto;padding:96px 40px;display:grid;grid-template-columns:minmax(0,0.82fr) minmax(0,1.18fr);gap:64px;align-items:center">
+<div style="min-width:0;border-radius:20px;overflow:hidden;background:#DDE8E4">
+<img src="img/about.png" alt="แพทย์ผู้ดำเนินการ Ticha Clinic" style="width:100%;height:560px;object-fit:cover;object-position:50% 22%;display:block">
+</div>
+<div>
+<h2 style="font-family:'IBM Plex Sans Thai',sans-serif;font-weight:600;font-size:52px;letter-spacing:.01em;line-height:1.16;margin:0 0 14px;color:#7C6D2C;text-transform:uppercase">ABOUT TICHA CLINIC</h2>
+<p style="margin:0 0 22px;font-size:26px;font-weight:500;line-height:1.5;color:#2D574B;max-width:26ch">ความงามที่ดี เริ่มจากการวิเคราะห์ที่แม่นยำ</p>
+<p style="margin:0 0 16px;font-size:17px;line-height:1.9;color:#605C55;max-width:62ch">Ticha Clinic ดูแลด้านการปรับรูปหน้าและผิวพรรณโดยแพทย์ผู้มีใบประกอบวิชาชีพเวชกรรม เราเริ่มจากการตรวจโครงหน้า สภาพผิว และซักประวัติอย่างละเอียด เพื่อออกแบบแนวทางการรักษาเฉพาะบุคคล</p>
+<p style="margin:0 0 34px;font-size:17px;line-height:1.9;color:#605C55;max-width:62ch">เราคัดเลือกผลิตภัณฑ์และเครื่องมือทางการแพทย์ที่ขึ้นทะเบียนถูกต้อง ทำหัตถการในห้องปลอดเชื้อ และมีการติดตามผลหลังการรักษาทุกราย</p>
+<dl style="margin:0;display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#E4E2DC;border:1px solid #E4E2DC;border-radius:16px;overflow:hidden">
+<div style="background:#FFFFFF;padding:24px 26px">
+<dd style="margin:0;font-family:'IBM Plex Sans Thai',sans-serif;font-size:34px;font-weight:600;color:#2D574B;font-variant-numeric:tabular-nums">4 ท่าน</dd>
+<dt style="font-size:15px;line-height:1.7;color:#7F7B72;margin-top:4px">ทีมแพทย์ประจำคลินิก</dt>
+</div>
+<div style="background:#FFFFFF;padding:24px 26px">
+<dd style="margin:0;font-family:'IBM Plex Sans Thai',sans-serif;font-size:34px;font-weight:600;color:#2D574B;font-variant-numeric:tabular-nums">2559</dd>
+<dt style="font-size:15px;line-height:1.7;color:#7F7B72;margin-top:4px">ให้บริการต่อเนื่องตั้งแต่ปี</dt>
+</div>
+<div style="background:#FFFFFF;padding:24px 26px">
+<dd style="margin:0;font-family:'IBM Plex Sans Thai',sans-serif;font-size:34px;font-weight:600;color:#2D574B">อย.</dd>
+<dt style="font-size:15px;line-height:1.7;color:#7F7B72;margin-top:4px">ผลิตภัณฑ์ขึ้นทะเบียนทุกรายการ</dt>
+</div>
+</dl>
+</div>
+</div>
+</section>
+
+<section style="background:#F1F5F3;border-top:1px solid #DDE8E4;border-bottom:1px solid #DDE8E4">
+<div style="max-width:1320px;margin:0 auto;padding:88px 40px;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,0.9fr);gap:64px;align-items:center">
+<div>
+<h2 style="font-family:'IBM Plex Sans Thai',sans-serif;font-weight:600;font-size:52px;letter-spacing:.01em;line-height:1.16;margin:0 0 14px;color:#7C6D2C;text-transform:uppercase">Skin problems</h2>
+<p style="margin:0 0 24px;font-size:26px;font-weight:500;line-height:1.5;color:#2D574B;max-width:26ch">คุณกำลังกังวลเรื่องไหนอยู่</p>
+<div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:32px">
+<a href="#services" style="font-size:16px;padding:11px 20px;border-radius:999px;background:#FFFFFF;border:1px solid #BCD1CA;color:#234439" style-hover="background:#1A332B;color:#fff">ร่องน้ำตา · ใต้ตาคล้ำ</a>
+<a href="#services" style="font-size:16px;padding:11px 20px;border-radius:999px;background:#FFFFFF;border:1px solid #BCD1CA;color:#234439" style-hover="background:#1A332B;color:#fff">ร่องแก้มลึก</a>
+<a href="#services" style="font-size:16px;padding:11px 20px;border-radius:999px;background:#FFFFFF;border:1px solid #BCD1CA;color:#234439" style-hover="background:#1A332B;color:#fff">กรอบหน้าไม่ชัด</a>
+<a href="#services" style="font-size:16px;padding:11px 20px;border-radius:999px;background:#FFFFFF;border:1px solid #BCD1CA;color:#234439" style-hover="background:#1A332B;color:#fff">คางถอย</a>
+<a href="#services" style="font-size:16px;padding:11px 20px;border-radius:999px;background:#FFFFFF;border:1px solid #BCD1CA;color:#234439" style-hover="background:#1A332B;color:#fff">ริ้วรอยหน้าผาก</a>
+<a href="#services" style="font-size:16px;padding:11px 20px;border-radius:999px;background:#FFFFFF;border:1px solid #BCD1CA;color:#234439" style-hover="background:#1A332B;color:#fff">กรามใหญ่</a>
+<a href="#services" style="font-size:16px;padding:11px 20px;border-radius:999px;background:#FFFFFF;border:1px solid #BCD1CA;color:#234439" style-hover="background:#1A332B;color:#fff">ผิวหมองคล้ำ</a>
+<a href="#services" style="font-size:16px;padding:11px 20px;border-radius:999px;background:#FFFFFF;border:1px solid #BCD1CA;color:#234439" style-hover="background:#1A332B;color:#fff">รูขุมขนกว้าง</a>
+</div>
+<a href="#book" style="font-size:17px;font-weight:500;min-height:54px;display:inline-flex;align-items:center;padding:0 30px;border-radius:999px;background:#1A332B;color:#F1F5F3" style-hover="background:#11221D;color:#fff">ให้แพทย์ช่วยประเมิน</a>
+</div>
+<div style="min-width:0;border-radius:20px;overflow:hidden;background:#DDE8E4">
+<img src="img/problems.png" alt="แพทย์ให้คำปรึกษาปัญหาผิว" style="width:100%;height:460px;object-fit:cover;object-position:40% 40%;display:block">
+</div>
+</div>
+</section>
+
+<section id="services" style="background:#FAF9F7">
+<div style="max-width:1320px;margin:0 auto;padding:96px 40px">
+<div style="display:flex;align-items:end;justify-content:space-between;gap:32px;margin-bottom:44px;flex-wrap:wrap">
+<div>
+<h2 style="font-family:'IBM Plex Sans Thai',sans-serif;font-weight:600;font-size:52px;letter-spacing:.01em;line-height:1.16;margin:0 0 14px;color:#7C6D2C;text-transform:uppercase">Our services</h2>
+<p style="margin:0 0 26px;font-size:26px;font-weight:500;line-height:1.5;color:#2D574B">โปรแกรมที่ให้บริการ</p>
+</div>
+<p style="margin:0;font-size:16px;line-height:1.85;color:#605C55;max-width:46ch">แพทย์จะเลือกโปรแกรมและปริมาณที่เหมาะสมหลังการประเมิน สอบถามรายละเอียดและสิทธิพิเศษได้ทางไลน์</p>
+</div>
+<div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px">
+<article style="background:#FFFFFF;border:1px solid #E4E2DC;border-radius:20px;overflow:hidden;display:flex;flex-direction:column" style-hover="border-color:#BCD1CA">
+<div style="min-width:0;position:relative;aspect-ratio:9/7;background:#DDE8E4">
+<img src="img/svc-1.png" alt="ฟิลเลอร์ร่องน้ำตา" style="width:100%;height:100%;object-fit:cover;display:block">
+<span style="position:absolute;top:14px;left:14px;font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;padding:6px 12px;border-radius:999px;background:rgba(250,249,247,.92);color:#234439">หัตถการฉีด</span>
+</div>
+<div style="padding:24px 26px 26px;display:flex;flex-direction:column;flex:1">
+<h3 style="font-family:'IBM Plex Sans Thai',sans-serif;font-size:23px;line-height:1.45;font-weight:600;margin:0 0 10px;color:#11221D">Program Filler ร่องน้ำตา</h3>
+<p style="margin:0 0 20px;font-size:16px;line-height:1.8;color:#605C55">ลดเงาคล้ำใต้ตาจากการยุบตัวของไขมันใต้ตา ให้ใบหน้าดูสดชื่นขึ้นอย่างเป็นธรรมชาติ</p>
+<p style="margin:0 0 22px;font-size:15px;line-height:1.7;color:#7F7B72;font-variant-numeric:tabular-nums">30–45 นาที<span style="color:#CDCAC2;padding:0 8px">/</span>พักฟื้น 3–7 วัน</p>
+<a href="#book" style="margin-top:auto;font-size:16px;font-weight:500;color:#1A332B;display:inline-flex;align-items:baseline;gap:8px;align-self:flex-start;border-bottom:1px solid #C0AE63;padding-bottom:3px" style-hover="color:#2D574B;border-bottom-color:#2D574B">ปรึกษาโปรแกรมนี้<span style="font-size:15px">→</span></a>
+</div>
+</article>
+<article style="background:#FFFFFF;border:1px solid #E4E2DC;border-radius:20px;overflow:hidden;display:flex;flex-direction:column" style-hover="border-color:#BCD1CA">
+<div style="min-width:0;position:relative;aspect-ratio:9/7;background:#DDE8E4">
+<img src="img/svc-2.png" alt="ฟิลเลอร์คางและกรอบหน้า" style="width:100%;height:100%;object-fit:cover;display:block">
+<span style="position:absolute;top:14px;left:14px;font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;padding:6px 12px;border-radius:999px;background:rgba(250,249,247,.92);color:#234439">หัตถการฉีด</span>
+</div>
+<div style="padding:24px 26px 26px;display:flex;flex-direction:column;flex:1">
+<h3 style="font-family:'IBM Plex Sans Thai',sans-serif;font-size:23px;line-height:1.45;font-weight:600;margin:0 0 10px;color:#11221D">Program Filler คางและกรอบหน้า</h3>
+<p style="margin:0 0 20px;font-size:16px;line-height:1.8;color:#605C55">ปรับสัดส่วนด้านข้างของใบหน้าและปลายคาง โดยยึดโครงกระดูกเดิมเป็นหลัก</p>
+<p style="margin:0 0 22px;font-size:15px;line-height:1.7;color:#7F7B72;font-variant-numeric:tabular-nums">30–60 นาที<span style="color:#CDCAC2;padding:0 8px">/</span>พักฟื้น 2–5 วัน</p>
+<a href="#book" style="margin-top:auto;font-size:16px;font-weight:500;color:#1A332B;display:inline-flex;align-items:baseline;gap:8px;align-self:flex-start;border-bottom:1px solid #C0AE63;padding-bottom:3px" style-hover="color:#2D574B;border-bottom-color:#2D574B">ปรึกษาโปรแกรมนี้<span style="font-size:15px">→</span></a>
+</div>
+</article>
+<article style="background:#FFFFFF;border:1px solid #E4E2DC;border-radius:20px;overflow:hidden;display:flex;flex-direction:column" style-hover="border-color:#BCD1CA">
+<div style="min-width:0;position:relative;aspect-ratio:9/7;background:#DDE8E4">
+<img src="img/svc-3.png" alt="โบทูลินัมท็อกซินใบหน้าส่วนบน" style="width:100%;height:100%;object-fit:cover;display:block">
+<span style="position:absolute;top:14px;left:14px;font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;padding:6px 12px;border-radius:999px;background:rgba(250,249,247,.92);color:#234439">หัตถการฉีด</span>
+</div>
+<div style="padding:24px 26px 26px;display:flex;flex-direction:column;flex:1">
+<h3 style="font-family:'IBM Plex Sans Thai',sans-serif;font-size:23px;line-height:1.45;font-weight:600;margin:0 0 10px;color:#11221D">Program Botulinum หน้าผากและหางตา</h3>
+<p style="margin:0 0 20px;font-size:16px;line-height:1.8;color:#605C55">ลดริ้วรอยจากการทำงานของกล้ามเนื้อแสดงสีหน้า เริ่มเห็นผลใน 3–7 วัน</p>
+<p style="margin:0 0 22px;font-size:15px;line-height:1.7;color:#7F7B72;font-variant-numeric:tabular-nums">15–20 นาที<span style="color:#CDCAC2;padding:0 8px">/</span>ไม่ต้องพักฟื้น</p>
+<a href="#book" style="margin-top:auto;font-size:16px;font-weight:500;color:#1A332B;display:inline-flex;align-items:baseline;gap:8px;align-self:flex-start;border-bottom:1px solid #C0AE63;padding-bottom:3px" style-hover="color:#2D574B;border-bottom-color:#2D574B">ปรึกษาโปรแกรมนี้<span style="font-size:15px">→</span></a>
+</div>
+</article>
+<article style="background:#FFFFFF;border:1px solid #E4E2DC;border-radius:20px;overflow:hidden;display:flex;flex-direction:column" style-hover="border-color:#BCD1CA">
+<div style="min-width:0;position:relative;aspect-ratio:9/7;background:#DDE8E4">
+<img src="img/svc-4.png" alt="โบทูลินัมท็อกซินกล้ามเนื้อกราม" style="width:100%;height:100%;object-fit:cover;display:block">
+<span style="position:absolute;top:14px;left:14px;font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;padding:6px 12px;border-radius:999px;background:rgba(250,249,247,.92);color:#234439">ปรับรูปหน้า</span>
+</div>
+<div style="padding:24px 26px 26px;display:flex;flex-direction:column;flex:1">
+<h3 style="font-family:'IBM Plex Sans Thai',sans-serif;font-size:23px;line-height:1.45;font-weight:600;margin:0 0 10px;color:#11221D">Program Botulinum กล้ามเนื้อกราม</h3>
+<p style="margin:0 0 20px;font-size:16px;line-height:1.8;color:#605C55">ปรับสมดุลกล้ามเนื้อบดเคี้ยวที่ทำงานมากกว่าปกติ ประเมินร่วมกับพฤติกรรมการกัดฟัน</p>
+<p style="margin:0 0 22px;font-size:15px;line-height:1.7;color:#7F7B72;font-variant-numeric:tabular-nums">15–20 นาที<span style="color:#CDCAC2;padding:0 8px">/</span>ไม่ต้องพักฟื้น</p>
+<a href="#book" style="margin-top:auto;font-size:16px;font-weight:500;color:#1A332B;display:inline-flex;align-items:baseline;gap:8px;align-self:flex-start;border-bottom:1px solid #C0AE63;padding-bottom:3px" style-hover="color:#2D574B;border-bottom-color:#2D574B">ปรึกษาโปรแกรมนี้<span style="font-size:15px">→</span></a>
+</div>
+</article>
+<article style="background:#FFFFFF;border:1px solid #E4E2DC;border-radius:20px;overflow:hidden;display:flex;flex-direction:column" style-hover="border-color:#BCD1CA">
+<div style="min-width:0;position:relative;aspect-ratio:9/7;background:#DDE8E4">
+<img src="img/svc-5.png" alt="โปรแกรมกระตุ้นคอลลาเจน" style="width:100%;height:100%;object-fit:cover;display:block">
+<span style="position:absolute;top:14px;left:14px;font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;padding:6px 12px;border-radius:999px;background:rgba(250,249,247,.92);color:#234439">ฟื้นฟูผิว</span>
+</div>
+<div style="padding:24px 26px 26px;display:flex;flex-direction:column;flex:1">
+<h3 style="font-family:'IBM Plex Sans Thai',sans-serif;font-size:23px;line-height:1.45;font-weight:600;margin:0 0 10px;color:#11221D">Program Skin Booster</h3>
+<p style="margin:0 0 20px;font-size:16px;line-height:1.8;color:#605C55">เพิ่มความชุ่มชื้นและความเรียบเนียนของผิวชั้นตื้น เหมาะกับผิวหมองคล้ำและผิวขาดน้ำ</p>
+<p style="margin:0 0 22px;font-size:15px;line-height:1.7;color:#7F7B72;font-variant-numeric:tabular-nums">30–40 นาที<span style="color:#CDCAC2;padding:0 8px">/</span>พักฟื้น 1–2 วัน</p>
+<a href="#book" style="margin-top:auto;font-size:16px;font-weight:500;color:#1A332B;display:inline-flex;align-items:baseline;gap:8px;align-self:flex-start;border-bottom:1px solid #C0AE63;padding-bottom:3px" style-hover="color:#2D574B;border-bottom-color:#2D574B">ปรึกษาโปรแกรมนี้<span style="font-size:15px">→</span></a>
+</div>
+</article>
+<article style="background:#FFFFFF;border:1px solid #E4E2DC;border-radius:20px;overflow:hidden;display:flex;flex-direction:column" style-hover="border-color:#BCD1CA">
+<div style="min-width:0;position:relative;aspect-ratio:9/7;background:#DDE8E4">
+<img src="img/svc-6.png" alt="โปรแกรมยกกระชับ" style="width:100%;height:100%;object-fit:cover;display:block">
+<span style="position:absolute;top:14px;left:14px;font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;padding:6px 12px;border-radius:999px;background:rgba(250,249,247,.92);color:#234439">ยกกระชับ</span>
+</div>
+<div style="padding:24px 26px 26px;display:flex;flex-direction:column;flex:1">
+<h3 style="font-family:'IBM Plex Sans Thai',sans-serif;font-size:23px;line-height:1.45;font-weight:600;margin:0 0 10px;color:#11221D">Program Lifting</h3>
+<p style="margin:0 0 20px;font-size:16px;line-height:1.8;color:#605C55">ยกกระชับกรอบหน้าและใต้คางด้วยพลังงานคลื่นเสียงความถี่สูง ไม่ต้องพักฟื้น</p>
+<p style="margin:0 0 22px;font-size:15px;line-height:1.7;color:#7F7B72;font-variant-numeric:tabular-nums">45–60 นาที<span style="color:#CDCAC2;padding:0 8px">/</span>ไม่ต้องพักฟื้น</p>
+<a href="#book" style="margin-top:auto;font-size:16px;font-weight:500;color:#1A332B;display:inline-flex;align-items:baseline;gap:8px;align-self:flex-start;border-bottom:1px solid #C0AE63;padding-bottom:3px" style-hover="color:#2D574B;border-bottom-color:#2D574B">ปรึกษาโปรแกรมนี้<span style="font-size:15px">→</span></a>
+</div>
+</article>
+</div>
+<div style="margin-top:40px;display:flex;justify-content:center">
+<a href="#services" style="font-size:17px;font-weight:500;min-height:52px;display:inline-flex;align-items:center;padding:0 34px;border-radius:999px;border:1px solid #1A332B;color:#1A332B" style-hover="background:#1A332B;color:#fff">ดูบริการทั้งหมด</a>
+</div>
+</div>
+</section>
+
+<section style="background:#11221D;color:#DDE8E4">
+<div style="max-width:1320px;margin:0 auto;padding:92px 40px">
+<h2 style="font-family:'IBM Plex Sans Thai',sans-serif;font-weight:600;font-size:52px;letter-spacing:.01em;line-height:1.16;margin:0 0 14px;color:#DCCF9B;text-transform:uppercase">Why Ticha Clinic</h2>
+<p style="margin:0 0 44px;font-size:26px;font-weight:500;line-height:1.5;color:#BCD1CA;max-width:26ch">คลินิกที่ออกแบบการรักษาเฉพาะบุคคล</p>
+<div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:36px 44px">
+<div>
+<p style="margin:0 0 12px;font-family:'IBM Plex Sans Thai',sans-serif;font-size:15px;font-weight:600;color:#C0AE63;font-variant-numeric:tabular-nums">01</p>
+<h3 style="font-size:21px;line-height:1.5;font-weight:600;margin:0 0 10px;color:#FFFFFF">ปรึกษากับแพทย์โดยตรง</h3>
+<p style="margin:0;font-size:16px;line-height:1.85;color:#92B3A9">แพทย์เป็นผู้วิเคราะห์และวางแผนการรักษาเอง ไม่ผ่านที่ปรึกษาการขาย</p>
+</div>
+<div>
+<p style="margin:0 0 12px;font-family:'IBM Plex Sans Thai',sans-serif;font-size:15px;font-weight:600;color:#C0AE63;font-variant-numeric:tabular-nums">02</p>
+<h3 style="font-size:21px;line-height:1.5;font-weight:600;margin:0 0 10px;color:#FFFFFF">ผลิตภัณฑ์และเครื่องมือคัดสรร</h3>
+<p style="margin:0;font-size:16px;line-height:1.85;color:#92B3A9">เปิดกล่องผลิตภัณฑ์ให้เห็นเลขทะเบียนต่อหน้าก่อนใช้งานทุกครั้ง</p>
+</div>
+<div>
+<p style="margin:0 0 12px;font-family:'IBM Plex Sans Thai',sans-serif;font-size:15px;font-weight:600;color:#C0AE63;font-variant-numeric:tabular-nums">03</p>
+<h3 style="font-size:21px;line-height:1.5;font-weight:600;margin:0 0 10px;color:#FFFFFF">ออกแบบเฉพาะบุคคล</h3>
+<p style="margin:0;font-size:16px;line-height:1.85;color:#92B3A9">แผนการรักษาอ้างอิงโครงหน้าเดิมและไลฟ์สไตล์ของผู้รับบริการแต่ละราย</p>
+</div>
+<div>
+<p style="margin:0 0 12px;font-family:'IBM Plex Sans Thai',sans-serif;font-size:15px;font-weight:600;color:#C0AE63;font-variant-numeric:tabular-nums">04</p>
+<h3 style="font-size:21px;line-height:1.5;font-weight:600;margin:0 0 10px;color:#FFFFFF">ดูแลหลังทำหัตถการ</h3>
+<p style="margin:0;font-size:16px;line-height:1.85;color:#92B3A9">มีการติดตามอาการภายใน 14 วัน และให้คำแนะนำการดูแลเป็นลายลักษณ์อักษร</p>
+</div>
+<div>
+<p style="margin:0 0 12px;font-family:'IBM Plex Sans Thai',sans-serif;font-size:15px;font-weight:600;color:#C0AE63;font-variant-numeric:tabular-nums">05</p>
+<h3 style="font-size:21px;line-height:1.5;font-weight:600;margin:0 0 10px;color:#FFFFFF">ห้องหัตถการปลอดเชื้อ</h3>
+<p style="margin:0;font-size:16px;line-height:1.85;color:#92B3A9">แยกพื้นที่ทำหัตถการออกจากพื้นที่ต้อนรับ พร้อมมุมนั่งส่วนตัว</p>
+</div>
+<div>
+<p style="margin:0 0 12px;font-family:'IBM Plex Sans Thai',sans-serif;font-size:15px;font-weight:600;color:#C0AE63;font-variant-numeric:tabular-nums">06</p>
+<h3 style="font-size:21px;line-height:1.5;font-weight:600;margin:0 0 10px;color:#FFFFFF">เดินทางสะดวก</h3>
+<p style="margin:0;font-size:16px;line-height:1.85;color:#92B3A9">ทุกสาขาอยู่ติดรถไฟฟ้า และมีที่จอดรถในอาคาร</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="doctors" style="background:#FAF9F7">
+<div style="max-width:1320px;margin:0 auto;padding:96px 40px">
+<div style="display:flex;align-items:end;justify-content:space-between;gap:32px;margin-bottom:44px;flex-wrap:wrap">
+<div>
+<h2 style="font-family:'IBM Plex Sans Thai',sans-serif;font-weight:600;font-size:52px;letter-spacing:.01em;line-height:1.16;margin:0 0 14px;color:#7C6D2C;text-transform:uppercase">Medical team</h2>
+<p style="margin:0 0 26px;font-size:26px;font-weight:500;line-height:1.5;color:#2D574B">ทีมแพทย์ผู้ให้การรักษา</p>
+</div>
+<a href="#doctors" style="font-size:16px;font-weight:500;border-bottom:1px solid #92B3A9;padding-bottom:2px">ดูประวัติแพทย์ทั้งหมด</a>
+</div>
+<div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px">
+<article style="background:#FFFFFF;border:1px solid #E4E2DC;border-radius:20px;overflow:hidden">
+<div style="min-width:0;aspect-ratio:3/4;background:#DDE8E4"><img src="img/doc-1.png" alt="แพทย์หญิงธิชา วรรณโสภณ" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+<div style="padding:24px 26px 26px">
+<h3 style="font-family:'IBM Plex Sans Thai',sans-serif;font-size:22px;line-height:1.45;font-weight:600;margin:0 0 6px;color:#11221D">พญ. ธิชา วรรณโสภณ</h3>
+<p style="margin:0 0 12px;font-size:14px;line-height:1.7;color:#7F7B72;font-variant-numeric:tabular-nums">ว.12345 · ผู้อำนวยการคลินิก</p>
+<p style="margin:0 0 20px;font-size:16px;line-height:1.8;color:#605C55">วุฒิบัตรตจวิทยา ชำนาญหัตถการบริเวณรอบดวงตาและกรอบหน้า</p>
+<a href="#book" style="font-size:16px;font-weight:500;min-height:46px;display:inline-flex;align-items:center;justify-content:center;width:100%;border-radius:999px;background:#F1F5F3;color:#1A332B;border:1px solid #DDE8E4;box-sizing:border-box" style-hover="background:#1A332B;color:#fff">นัดหมายกับแพทย์ท่านนี้</a>
+</div>
+</article>
+<article style="background:#FFFFFF;border:1px solid #E4E2DC;border-radius:20px;overflow:hidden">
+<div style="min-width:0;aspect-ratio:3/4;background:#DDE8E4"><img src="img/doc-2.png" alt="นายแพทย์กันตพงศ์ สุขะวัฒนะ" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+<div style="padding:24px 26px 26px">
+<h3 style="font-family:'IBM Plex Sans Thai',sans-serif;font-size:22px;line-height:1.45;font-weight:600;margin:0 0 6px;color:#11221D">นพ. กันตพงศ์ สุขะวัฒนะ</h3>
+<p style="margin:0 0 12px;font-size:14px;line-height:1.7;color:#7F7B72;font-variant-numeric:tabular-nums">ว.23456 · แพทย์ประจำ</p>
+<p style="margin:0 0 20px;font-size:16px;line-height:1.8;color:#605C55">ดูแลหัตถการโบทูลินัมท็อกซินใบหน้าส่วนบนและกล้ามเนื้อกราม</p>
+<a href="#book" style="font-size:16px;font-weight:500;min-height:46px;display:inline-flex;align-items:center;justify-content:center;width:100%;border-radius:999px;background:#F1F5F3;color:#1A332B;border:1px solid #DDE8E4;box-sizing:border-box" style-hover="background:#1A332B;color:#fff">นัดหมายกับแพทย์ท่านนี้</a>
+</div>
+</article>
+<article style="background:#FFFFFF;border:1px solid #E4E2DC;border-radius:20px;overflow:hidden">
+<div style="min-width:0;aspect-ratio:3/4;background:#DDE8E4"><img src="img/doc-3.png" alt="แพทย์หญิงศรัณย์รัชต์ อภิชาตกุล" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+<div style="padding:24px 26px 26px">
+<h3 style="font-family:'IBM Plex Sans Thai',sans-serif;font-size:22px;line-height:1.45;font-weight:600;margin:0 0 6px;color:#11221D">พญ. ศรัณย์รัชต์ อภิชาตกุล</h3>
+<p style="margin:0 0 12px;font-size:14px;line-height:1.7;color:#7F7B72;font-variant-numeric:tabular-nums">ว.34567 · แพทย์ประจำ</p>
+<p style="margin:0 0 20px;font-size:16px;line-height:1.8;color:#605C55">ประเมินสัดส่วนใบหน้าและวางแผนการดูแลผิวระยะยาว</p>
+<a href="#book" style="font-size:16px;font-weight:500;min-height:46px;display:inline-flex;align-items:center;justify-content:center;width:100%;border-radius:999px;background:#F1F5F3;color:#1A332B;border:1px solid #DDE8E4;box-sizing:border-box" style-hover="background:#1A332B;color:#fff">นัดหมายกับแพทย์ท่านนี้</a>
+</div>
+</article>
+</div>
+</div>
+</section>
+
+<section id="reviews" style="background:#F1F5F3;border-top:1px solid #DDE8E4">
+<div style="max-width:1320px;margin:0 auto;padding:92px 40px">
+<div style="display:flex;align-items:end;justify-content:space-between;gap:32px;margin-bottom:44px;flex-wrap:wrap">
+<div>
+<h2 style="font-family:'IBM Plex Sans Thai',sans-serif;font-weight:600;font-size:52px;letter-spacing:.01em;line-height:1.16;margin:0 0 14px;color:#7C6D2C;text-transform:uppercase">Testimonials</h2>
+<p style="margin:0 0 26px;font-size:26px;font-weight:500;line-height:1.5;color:#2D574B">รีวิวจากผู้รับบริการ</p>
+</div>
+<a href="#reviews" style="font-size:16px;font-weight:500;border-bottom:1px solid #92B3A9;padding-bottom:2px">ดูรีวิวทั้งหมด</a>
+</div>
+<div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px">
+<figure style="margin:0;background:#FFFFFF;border:1px solid #DDE8E4;border-radius:20px;overflow:hidden;display:flex;flex-direction:column">
+<div style="min-width:0;aspect-ratio:4/5;background:#DDE8E4"><img src="img/review-1.png" alt="รีวิวโปรแกรมฟิลเลอร์ร่องน้ำตา" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+<div style="padding:24px 26px 26px;display:flex;flex-direction:column;flex:1">
+<blockquote style="margin:0 0 18px;font-size:17px;line-height:1.85;color:#302E2A">“แพทย์บอกตรง ๆ ว่าจุดที่กังวลยังไม่จำเป็นต้องทำ วันนั้นกลับบ้านโดยไม่ได้ทำอะไรเลย และนั่นคือเหตุผลที่กลับมาอีก”</blockquote>
+<figcaption style="margin-top:auto;font-size:14px;line-height:1.7;color:#7F7B72">คุณณิชา อายุ 34 ปี<br>Program Filler ร่องน้ำตา · มีนาคม 2569</figcaption>
+</div>
+</figure>
+<figure style="margin:0;background:#FFFFFF;border:1px solid #DDE8E4;border-radius:20px;overflow:hidden;display:flex;flex-direction:column">
+<div style="min-width:0;aspect-ratio:4/5;background:#DDE8E4"><img src="img/review-2.png" alt="รีวิวโปรแกรมโบทูลินัมท็อกซิน" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+<div style="padding:24px 26px 26px;display:flex;flex-direction:column;flex:1">
+<blockquote style="margin:0 0 18px;font-size:17px;line-height:1.85;color:#302E2A">“ได้เอกสารการดูแลกลับบ้าน และมีการโทรติดตามอาการจริงในวันที่ห้า รู้สึกว่าไม่ได้ถูกทิ้งหลังจ่ายเงิน”</blockquote>
+<figcaption style="margin-top:auto;font-size:14px;line-height:1.7;color:#7F7B72">คุณกมลชนก อายุ 41 ปี<br>Program Botulinum หน้าผาก · กุมภาพันธ์ 2569</figcaption>
+</div>
+</figure>
+<figure style="margin:0;background:#FFFFFF;border:1px solid #DDE8E4;border-radius:20px;overflow:hidden;display:flex;flex-direction:column">
+<div style="min-width:0;aspect-ratio:4/5;background:#DDE8E4"><img src="img/review-3.png" alt="รีวิวการเข้าปรึกษาแพทย์" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+<div style="padding:24px 26px 26px;display:flex;flex-direction:column;flex:1">
+<blockquote style="margin:0 0 18px;font-size:17px;line-height:1.85;color:#302E2A">“บรรยากาศเหมือนไปตรวจที่โรงพยาบาลมากกว่าคลินิกความงาม ไม่มีใครเสนอขายคอร์สเลยแม้แต่ครั้งเดียว”</blockquote>
+<figcaption style="margin-top:auto;font-size:14px;line-height:1.7;color:#7F7B72">คุณพิมพ์มาดา อายุ 29 ปี<br>ปรึกษาเพื่อประเมิน · มกราคม 2569</figcaption>
+</div>
+</figure>
+</div>
+</div>
+</section>
+
+<sc-if value="{{ showPromotions }}" hint-placeholder-val="{{ true }}">
+<section id="promotions" style="background:#FAF9F7">
+<div style="max-width:1320px;margin:0 auto;padding:92px 40px">
+<div style="display:flex;align-items:end;justify-content:space-between;gap:32px;margin-bottom:44px;flex-wrap:wrap">
+<div>
+<h2 style="font-family:'IBM Plex Sans Thai',sans-serif;font-weight:600;font-size:52px;letter-spacing:.01em;line-height:1.16;margin:0 0 14px;color:#7C6D2C;text-transform:uppercase">Promotions</h2>
+<p style="margin:0 0 26px;font-size:26px;font-weight:500;line-height:1.5;color:#2D574B">สิทธิพิเศษประจำเดือน</p>
+</div>
+<a href="#promotions" style="font-size:16px;font-weight:500;border-bottom:1px solid #92B3A9;padding-bottom:2px">ดูโปรโมชันทั้งหมด</a>
+</div>
+<div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px">
+<a href="#book" style="text-decoration:none;color:inherit;background:#FFFFFF;border:1px solid #E4E2DC;border-radius:20px;overflow:hidden;display:block" style-hover="border-color:#C0AE63">
+<div style="min-width:0;aspect-ratio:4/5;background:#EDE6D2"><img src="img/promo-1.png" alt="สิทธิพิเศษสำหรับผู้เข้ารับการประเมินครั้งแรก" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+<div style="padding:22px 24px 24px">
+<p style="margin:0 0 8px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#7C6D2C">First visit</p>
+<h3 style="font-size:20px;line-height:1.5;font-weight:600;margin:0 0 8px;color:#11221D">สิทธิพิเศษสำหรับการประเมินครั้งแรก</h3>
+<p style="margin:0;font-size:15px;line-height:1.8;color:#605C55">ลงทะเบียนทางไลน์เพื่อรับรายละเอียดสิทธิพิเศษจากเจ้าหน้าที่</p>
+</div>
+</a>
+<a href="#book" style="text-decoration:none;color:inherit;background:#FFFFFF;border:1px solid #E4E2DC;border-radius:20px;overflow:hidden;display:block" style-hover="border-color:#C0AE63">
+<div style="min-width:0;aspect-ratio:4/5;background:#EDE6D2"><img src="img/promo-2.png" alt="แพ็กเกจดูแลต่อเนื่อง" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+<div style="padding:22px 24px 24px">
+<p style="margin:0 0 8px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#7C6D2C">Care plan</p>
+<h3 style="font-size:20px;line-height:1.5;font-weight:600;margin:0 0 8px;color:#11221D">แผนดูแลต่อเนื่องรายปี</h3>
+<p style="margin:0;font-size:15px;line-height:1.8;color:#605C55">วางตารางหัตถการทั้งปีร่วมกับแพทย์ท่านเดิม พร้อมนัดติดตามผล</p>
+</div>
+</a>
+<a href="#book" style="text-decoration:none;color:inherit;background:#FFFFFF;border:1px solid #E4E2DC;border-radius:20px;overflow:hidden;display:block" style-hover="border-color:#C0AE63">
+<div style="min-width:0;aspect-ratio:4/5;background:#EDE6D2"><img src="img/promo-3.png" alt="โปรแกรมดูแลผิวคู่" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+<div style="padding:22px 24px 24px">
+<p style="margin:0 0 8px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#7C6D2C">Duo program</p>
+<h3 style="font-size:20px;line-height:1.5;font-weight:600;margin:0 0 8px;color:#11221D">โปรแกรมคู่ ยกกระชับและฟื้นฟูผิว</h3>
+<p style="margin:0;font-size:15px;line-height:1.8;color:#605C55">แพทย์ออกแบบการจับคู่โปรแกรมตามปัญหาผิวของแต่ละราย</p>
+</div>
+</a>
+</div>
+</div>
+</section>
+</sc-if>
+
+<section id="book" style="background:#1A332B;color:#DDE8E4">
+<div style="max-width:1320px;margin:0 auto;padding:88px 40px;display:grid;grid-template-columns:minmax(0,0.95fr) minmax(0,1.05fr);gap:64px;align-items:center">
+<div>
+<h2 style="font-family:'IBM Plex Sans Thai',sans-serif;font-weight:600;font-size:52px;letter-spacing:.01em;line-height:1.16;margin:0 0 14px;color:#DCCF9B;text-transform:uppercase">Book a consultation</h2>
+<p style="margin:0 0 26px;font-size:26px;font-weight:500;line-height:1.5;color:#BCD1CA;max-width:24ch">ลงทะเบียนเพื่อนัดหมายกับแพทย์</p>
+<p style="margin:0 0 28px;font-size:17px;line-height:1.85;color:#92B3A9;max-width:50ch">การประเมินใช้เวลาประมาณ 30 นาที แพทย์จะตรวจโครงหน้า ซักประวัติ และแจ้งทางเลือกทั้งหมด รวมถึงกรณีที่ไม่แนะนำให้ทำหัตถการ</p>
+<div style="display:flex;gap:14px;flex-wrap:wrap">
+<a href="#book" style="font-size:17px;font-weight:500;min-height:54px;display:inline-flex;align-items:center;padding:0 30px;border-radius:999px;background:#FFFFFF;color:#11221D;gap:9px" style-hover="background:#F1F5F3;color:#11221D"><img src="assets/line-logo.webp" alt="LINE" style="width:20px;height:20px;display:block;flex:0 0 auto">ไลน์ @tichaclinic</a>
+<a href="#book" style="font-size:17px;font-weight:500;min-height:54px;display:inline-flex;align-items:center;padding:0 28px;border-radius:999px;border:1px solid #628F82;color:#FFFFFF" style-hover="background:#2D574B;color:#fff">โทร 02-000-0000</a>
+</div>
+</div>
+<form onSubmit="{{ onSubmit }}" style="background:#FAF9F7;border-radius:24px;padding:32px 34px 34px;display:grid;gap:16px">
+<div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px">
+<label style="display:grid;gap:6px;font-size:14px;color:#605C55;min-width:0">ชื่อ
+<input type="text" placeholder="ชื่อ" style="font-family:inherit;font-size:16px;min-height:48px;padding:0 14px;border-radius:10px;border:1px solid #CDCAC2;background:#FFFFFF;color:#302E2A;box-sizing:border-box;width:100%;min-width:0">
+</label>
+<label style="display:grid;gap:6px;font-size:14px;color:#605C55;min-width:0">นามสกุล
+<input type="text" placeholder="นามสกุล" style="font-family:inherit;font-size:16px;min-height:48px;padding:0 14px;border-radius:10px;border:1px solid #CDCAC2;background:#FFFFFF;color:#302E2A;box-sizing:border-box;width:100%;min-width:0">
+</label>
+<label style="display:grid;gap:6px;font-size:14px;color:#605C55;min-width:0">เบอร์โทร
+<input type="tel" placeholder="08X-XXX-XXXX" style="font-family:inherit;font-size:16px;min-height:48px;padding:0 14px;border-radius:10px;border:1px solid #CDCAC2;background:#FFFFFF;color:#302E2A;box-sizing:border-box;width:100%;min-width:0">
+</label>
+<label style="display:grid;gap:6px;font-size:14px;color:#605C55;min-width:0">ไลน์ไอดี
+<input type="text" placeholder="LINE ID" style="font-family:inherit;font-size:16px;min-height:48px;padding:0 14px;border-radius:10px;border:1px solid #CDCAC2;background:#FFFFFF;color:#302E2A;box-sizing:border-box;width:100%;min-width:0">
+</label>
+</div>
+<label style="display:grid;gap:6px;font-size:14px;color:#605C55;min-width:0">เรื่องที่ต้องการปรึกษา
+<select style="font-family:inherit;font-size:16px;min-height:48px;padding:0 12px;border-radius:10px;border:1px solid #CDCAC2;background:#FFFFFF;color:#302E2A;box-sizing:border-box;width:100%;min-width:0">
+<option>หัตถการฉีด · ฟิลเลอร์</option>
+<option>หัตถการฉีด · โบทูลินัมท็อกซิน</option>
+<option>ปรับรูปหน้าและกรอบหน้า</option>
+<option>ฟื้นฟูสภาพผิว</option>
+<option>ยกกระชับ</option>
+<option>ยังไม่แน่ใจ ขอให้แพทย์ประเมิน</option>
+</select>
+</label>
+<label style="display:grid;gap:6px;font-size:14px;color:#605C55;min-width:0">สาขาที่สะดวก
+<select style="font-family:inherit;font-size:16px;min-height:48px;padding:0 12px;border-radius:10px;border:1px solid #CDCAC2;background:#FFFFFF;color:#302E2A;box-sizing:border-box;width:100%;min-width:0">
+<option>สีลม · ดุสิต เซ็นทรัล พาร์ค</option>
+<option>อารีย์ · Vanit Village</option>
+</select>
+</label>
+<button type="submit" style="font-family:inherit;font-size:17px;font-weight:500;min-height:54px;border-radius:999px;border:1px solid transparent;background:#1A332B;color:#F1F5F3;cursor:pointer;margin-top:4px" style-hover="background:#11221D">{{ ctaLabel }}</button>
+<p style="margin:0;font-size:13px;line-height:1.7;color:#7F7B72">{{ formStatus }}</p>
+</form>
+</div>
+</section>
+
+<section id="journal" style="background:#FAF9F7">
+<div style="max-width:1320px;margin:0 auto;padding:92px 40px">
+<div style="display:flex;align-items:end;justify-content:space-between;gap:32px;margin-bottom:44px;flex-wrap:wrap">
+<div>
+<h2 style="font-family:'IBM Plex Sans Thai',sans-serif;font-weight:600;font-size:52px;letter-spacing:.01em;line-height:1.16;margin:0 0 14px;color:#7C6D2C;text-transform:uppercase">Journal</h2>
+<p style="margin:0 0 26px;font-size:26px;font-weight:500;line-height:1.5;color:#2D574B">อ่านก่อนตัดสินใจ</p>
+</div>
+<a href="#journal" style="font-size:16px;font-weight:500;border-bottom:1px solid #92B3A9;padding-bottom:2px">บทความทั้งหมด</a>
+</div>
+<div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px">
+<a href="#journal" style="text-decoration:none;color:inherit;background:#FFFFFF;border:1px solid #E4E2DC;border-radius:20px;overflow:hidden;display:block" style-hover="border-color:#BCD1CA">
+<div style="min-width:0;aspect-ratio:16/9;background:#DDE8E4"><img src="img/blog-1.png" alt="" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+<div style="padding:22px 24px 26px">
+<p style="margin:0 0 8px;font-size:13px;color:#7F7B72;font-variant-numeric:tabular-nums">ฟิลเลอร์ · 12 สิงหาคม 2569 · อ่าน 6 นาที</p>
+<h3 style="font-family:'IBM Plex Sans Thai',sans-serif;font-size:21px;line-height:1.5;font-weight:600;margin:0 0 10px;color:#11221D">ฟิลเลอร์ใต้ตาอยู่ได้นานแค่ไหน กี่วันเข้าที่</h3>
+<p style="margin:0;font-size:16px;line-height:1.8;color:#605C55">ปัจจัยที่ทำให้ผลลัพธ์อยู่ได้ไม่เท่ากันในแต่ละคน และช่วงเวลาที่ควรกลับมาตรวจ</p>
+</div>
+</a>
+<a href="#journal" style="text-decoration:none;color:inherit;background:#FFFFFF;border:1px solid #E4E2DC;border-radius:20px;overflow:hidden;display:block" style-hover="border-color:#BCD1CA">
+<div style="min-width:0;aspect-ratio:16/9;background:#DDE8E4"><img src="img/blog-2.png" alt="" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+<div style="padding:22px 24px 26px">
+<p style="margin:0 0 8px;font-size:13px;color:#7F7B72;font-variant-numeric:tabular-nums">โบทูลินัมท็อกซิน · 5 สิงหาคม 2569 · อ่าน 5 นาที</p>
+<h3 style="font-family:'IBM Plex Sans Thai',sans-serif;font-size:21px;line-height:1.5;font-weight:600;margin:0 0 10px;color:#11221D">ฉีดโบทูลินัมท็อกซินบ่อยแค่ไหนจึงเหมาะสม</h3>
+<p style="margin:0;font-size:16px;line-height:1.8;color:#605C55">ระยะห่างที่แพทย์แนะนำ และเหตุผลที่การฉีดถี่เกินไปไม่เป็นผลดีต่อกล้ามเนื้อ</p>
+</div>
+</a>
+<a href="#journal" style="text-decoration:none;color:inherit;background:#FFFFFF;border:1px solid #E4E2DC;border-radius:20px;overflow:hidden;display:block" style-hover="border-color:#BCD1CA">
+<div style="min-width:0;aspect-ratio:16/9;background:#DDE8E4"><img src="img/blog-3.png" alt="" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+<div style="padding:22px 24px 26px">
+<p style="margin:0 0 8px;font-size:13px;color:#7F7B72;font-variant-numeric:tabular-nums">ก่อนเข้ารับบริการ · 28 กรกฎาคม 2569 · อ่าน 4 นาที</p>
+<h3 style="font-family:'IBM Plex Sans Thai',sans-serif;font-size:21px;line-height:1.5;font-weight:600;margin:0 0 10px;color:#11221D">ตรวจสอบคลินิกและผลิตภัณฑ์อย่างไรก่อนตัดสินใจ</h3>
+<p style="margin:0;font-size:16px;line-height:1.8;color:#605C55">สิ่งที่ควรขอดูทุกครั้ง ตั้งแต่ใบอนุญาตสถานพยาบาลจนถึงกล่องผลิตภัณฑ์</p>
+</div>
+</a>
+</div>
+</div>
+</section>
+
+<section id="branches" style="background:#F1F5F3;border-top:1px solid #DDE8E4">
+<div style="max-width:1320px;margin:0 auto;padding:92px 40px">
+<h2 style="font-family:'IBM Plex Sans Thai',sans-serif;font-weight:600;font-size:52px;letter-spacing:.01em;line-height:1.16;margin:0 0 14px;color:#7C6D2C;text-transform:uppercase">Branches</h2>
+<p style="margin:0 0 40px;font-size:26px;font-weight:500;line-height:1.5;color:#2D574B">สาขาของเรา</p>
+<div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px">
+<article style="background:#FFFFFF;border:1px solid #DDE8E4;border-radius:20px;overflow:hidden;display:grid;grid-template-columns:minmax(0,0.8fr) minmax(0,1.2fr)">
+<div style="min-width:0;background:#DDE8E4"><img src="img/branch-1.png" alt="สาขาสีลม" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+<div style="padding:28px 30px">
+<h3 style="font-family:'IBM Plex Sans Thai',sans-serif;font-size:23px;line-height:1.45;font-weight:600;margin:0 0 14px;color:#11221D">สาขาสีลม · ดุสิต เซ็นทรัล พาร์ค ชั้น 3</h3>
+<dl style="margin:0 0 18px;display:grid;gap:10px;font-size:15px;line-height:1.75">
+<div style="display:grid;grid-template-columns:88px 1fr;gap:14px"><dt style="color:#7F7B72">เวลา</dt><dd style="margin:0;font-variant-numeric:tabular-nums">10:00 – 20:00 น. ทุกวัน</dd></div>
+<div style="display:grid;grid-template-columns:88px 1fr;gap:14px"><dt style="color:#7F7B72">เดินทาง</dt><dd style="margin:0">MRT สีลม ทางออก 2 · BTS ศาลาแดง ทางออก 4</dd></div>
+<div style="display:grid;grid-template-columns:88px 1fr;gap:14px"><dt style="color:#7F7B72">โทร</dt><dd style="margin:0;font-variant-numeric:tabular-nums">02-000-0000 กด 1</dd></div>
+</dl>
+<a href="#branches" style="font-size:16px;font-weight:500;border-bottom:1px solid #92B3A9;padding-bottom:2px">ดูแผนที่สาขา</a>
+</div>
+</article>
+<article style="background:#FFFFFF;border:1px solid #DDE8E4;border-radius:20px;overflow:hidden;display:grid;grid-template-columns:minmax(0,0.8fr) minmax(0,1.2fr)">
+<div style="min-width:0;background:#DDE8E4"><img src="img/branch-2.png" alt="สาขาอารีย์" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+<div style="padding:28px 30px">
+<h3 style="font-family:'IBM Plex Sans Thai',sans-serif;font-size:23px;line-height:1.45;font-weight:600;margin:0 0 14px;color:#11221D">สาขาอารีย์ · Vanit Village ชั้น 2</h3>
+<dl style="margin:0 0 18px;display:grid;gap:10px;font-size:15px;line-height:1.75">
+<div style="display:grid;grid-template-columns:88px 1fr;gap:14px"><dt style="color:#7F7B72">เวลา</dt><dd style="margin:0;font-variant-numeric:tabular-nums">11:00 – 20:00 น. ทุกวัน</dd></div>
+<div style="display:grid;grid-template-columns:88px 1fr;gap:14px"><dt style="color:#7F7B72">เดินทาง</dt><dd style="margin:0">BTS อารีย์ ทางออก 2 · มีที่จอดรถ</dd></div>
+<div style="display:grid;grid-template-columns:88px 1fr;gap:14px"><dt style="color:#7F7B72">โทร</dt><dd style="margin:0;font-variant-numeric:tabular-nums">02-000-0000 กด 2</dd></div>
+</dl>
+<a href="#branches" style="font-size:16px;font-weight:500;border-bottom:1px solid #92B3A9;padding-bottom:2px">ดูแผนที่สาขา</a>
+</div>
+</article>
+</div>
+</div>
+</section>
+
+<footer style="background:#11221D;color:#92B3A9">
+<div style="max-width:1320px;margin:0 auto;padding:64px 40px 28px;display:grid;grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,0.7fr));gap:44px;font-size:15px;line-height:1.85">
+<div>
+<span style="display:flex;align-items:center;gap:13px;margin-bottom:20px">
+<img src="assets/ticha-logo-light.png" alt="Ticha Clinic" style="display:block;height:44px;width:auto;flex:0 0 auto">
+</span>
+<p style="margin:0;max-width:44ch">Ticha Clinic · คลินิกเวชกรรม ผู้ชำนาญการด้านการปรับรูปหน้าและผิวพรรณ ใบอนุญาตประกอบกิจการสถานพยาบาลเลขที่ 10101010101</p>
+</div>
+<div style="display:grid;gap:6px;align-content:start">
+<p style="margin:0 0 6px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#DCCF9B">Menu</p>
+<a href="#services" style="color:#BCD1CA">บริการทั้งหมด</a>
+<a href="#doctors" style="color:#BCD1CA">ทีมแพทย์</a>
+<a href="#reviews" style="color:#BCD1CA">รีวิว</a>
+<a href="#journal" style="color:#BCD1CA">บทความ</a>
+</div>
+<div style="display:grid;gap:6px;align-content:start">
+<p style="margin:0 0 6px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#DCCF9B">Branch</p>
+<a href="#branches" style="color:#BCD1CA">สาขาสีลม</a>
+<a href="#branches" style="color:#BCD1CA">สาขาอารีย์</a>
+</div>
+<div style="display:grid;gap:6px;align-content:start">
+<p style="margin:0 0 6px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#DCCF9B">Contact</p>
+<a href="#book" style="color:#BCD1CA;font-variant-numeric:tabular-nums">02-000-0000</a>
+<a href="#book" style="color:#BCD1CA">ไลน์ @tichaclinic</a>
+<a href="#book" style="color:#BCD1CA">hello@tichaclinic.com</a>
+</div>
+</div>
+<div style="max-width:1320px;margin:0 auto;padding:0 40px 40px;border-top:1px solid #234439;padding-top:20px;display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;font-size:13px">
+<span>© 2569 Ticha Clinic. All rights reserved.</span>
+<span style="font-variant-numeric:tabular-nums">ปรับปรุงข้อมูลล่าสุด 31 สิงหาคม 2569</span>
+</div>
+</footer>
+
+<div style="background:#1A332B;border-top:1px solid #2D574B">
+<div style="max-width:1320px;margin:0 auto;padding:12px 40px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap">
+<p style="margin:0;font-size:16px;color:#DDE8E4">ปรึกษาแพทย์ก่อนตัดสินใจ · เปิดทุกวัน 10:00–20:00 น.</p>
+<div style="display:flex;gap:10px">
+<a href="#book" style="font-size:15px;font-weight:500;min-height:44px;display:inline-flex;align-items:center;padding:0 20px;border-radius:999px;border:1px solid #628F82;color:#FFFFFF" style-hover="background:#2D574B;color:#fff">โทร 02-000-0000</a>
+<a href="#book" style="font-size:15px;font-weight:500;min-height:44px;display:inline-flex;align-items:center;padding:0 22px;border-radius:999px;background:#FFFFFF;color:#11221D;gap:9px" style-hover="background:#F1F5F3;color:#11221D"><img src="assets/line-logo.webp" alt="LINE" style="width:20px;height:20px;display:block;flex:0 0 auto">ไลน์ @tichaclinic</a>
+</div>
+</div>
+</div>
+
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;ctaLabel&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;นัดหมายปรึกษาแพทย์&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;เนื้อหา&quot;},&quot;showPromotions&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;บล็อก&quot;}}">
+class Component extends DCLogic {
+  state = { sent: false };
+  renderVals() {
+    return {
+      ctaLabel: this.props.ctaLabel ?? "นัดหมายปรึกษาแพทย์",
+      showPromotions: this.props.showPromotions ?? true,
+      formStatus: this.state.sent
+        ? "ได้รับข้อมูลแล้ว เจ้าหน้าที่จะติดต่อกลับภายในเวลาทำการ"
+        : "เจ้าหน้าที่จะติดต่อกลับเพื่อยืนยันวันและเวลานัดหมาย",
+      onSubmit: (e) => { e.preventDefault(); this.setState({ sent: true }); }
+    };
+  }
+}
+</script>
+</body>
+</html>

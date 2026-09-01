@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ticha Clinic — Design language v0.1</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Thai:wght@600&family=IBM+Plex+Sans+Thai:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --pine-50:#F1F5F3;--pine-100:#DDE8E4;--pine-200:#BCD1CA;--pine-300:#92B3A9;
+  --pine-400:#628F82;--pine-500:#3F6E60;--pine-600:#2D574B;--pine-700:#234439;
+  --pine-800:#1A332B;--pine-900:#11221D;
+  --stone-0:#FFFFFF;--stone-50:#FAF9F7;--stone-100:#F2F1ED;--stone-200:#E4E2DC;
+  --stone-300:#CDCAC2;--stone-400:#A5A199;--stone-500:#7F7B72;--stone-600:#605C55;
+  --stone-700:#47443E;--stone-800:#302E2A;--stone-900:#1C1B18;
+  --brass-50:#FAF6EA;--brass-100:#F0E8CE;--brass-200:#DCCF9B;--brass-300:#C0AE63;
+  --brass-400:#9E8C3E;--brass-500:#7C6D2C;--brass-600:#5D521F;
+  --warn-50:#FDF6E7;--warn-100:#F8E6BB;--warn-200:#EFCB79;--warn-300:#DDA834;
+  --warn-400:#B67F16;--warn-500:#8C610F;--warn-600:#684809;
+  --danger-50:#FCEFED;--danger-100:#F6D4CF;--danger-200:#E8A199;--danger-300:#D26558;
+  --danger-400:#B23E30;--danger-500:#8D2B20;--danger-600:#6A1F17;
+  --ok-50:#EEF5EF;--ok-100:#D3E6D6;--ok-200:#A6CBAB;--ok-300:#6FA777;
+  --ok-400:#47804F;--ok-500:#33633A;--ok-600:#254A2B;
+  --font-display:"Noto Serif Thai",Georgia,serif;
+  --font-body:"IBM Plex Sans Thai","IBM Plex Sans",system-ui,sans-serif;
+  --r-sm:4px;--r-md:8px;--r-lg:12px;--r-xl:16px;--r-pill:999px;
+  --e1:0 1px 2px rgba(28,27,24,.06);
+  --e2:0 2px 8px rgba(28,27,24,.06),0 1px 2px rgba(28,27,24,.04);
+  --e3:0 10px 28px rgba(28,27,24,.09);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--stone-50);color:var(--stone-800);
+  font-family:var(--font-body);font-size:17px;line-height:1.8;font-weight:400;
+  font-variant-numeric:tabular-nums;}
+.wrap{max-width:960px;margin:0 auto;padding:48px 24px 96px}
+h1,h2{font-family:var(--font-display);font-weight:600;letter-spacing:0;color:var(--stone-900)}
+h1{font-size:40px;line-height:1.35;margin:0 0 8px}
+h2{font-size:30px;line-height:1.4;margin:0}
+h3{font-size:24px;line-height:1.45;font-weight:600;margin:0}
+h4{font-size:20px;line-height:1.5;font-weight:500;margin:0}
+.lede{font-size:18px;line-height:1.8;color:var(--stone-600);margin:0}
+.cap{font-size:13px;line-height:1.7;color:var(--stone-600)}
+.eyebrow{font-size:13px;line-height:1.6;font-weight:500;letter-spacing:.04em;
+  text-transform:uppercase;color:var(--brass-500)}
+.eyebrow-th{font-size:13px;font-weight:500;letter-spacing:.02em;color:var(--brass-500);text-transform:none}
+section{margin-top:64px}
+.shead{display:flex;align-items:baseline;gap:12px;padding-bottom:12px;
+  border-bottom:1px solid var(--stone-200);margin-bottom:32px}
+.shead span{font-size:13px;color:var(--stone-600);font-weight:500}
+.grid{display:grid;gap:16px}
+.ramp{display:grid;grid-template-columns:repeat(auto-fit,minmax(78px,1fr));gap:6px;margin-bottom:20px}
+.sw{border-radius:var(--r-sm);padding:8px 8px 10px;min-height:76px;display:flex;
+  flex-direction:column;justify-content:flex-end;font-size:11px;line-height:1.4;
+  border:1px solid rgba(28,27,24,.07)}
+.sw b{font-weight:500;font-size:12px}
+.rname{font-size:13px;font-weight:500;color:var(--stone-700);margin-bottom:8px}
+.spec{background:var(--stone-0);border:1px solid var(--stone-200);border-radius:var(--r-lg);padding:20px 24px}
+.tbl{width:100%;border-collapse:collapse;font-size:15px}
+.tbl th{text-align:left;font-weight:500;font-size:13px;color:var(--stone-600);
+  padding:10px 14px;background:var(--stone-100);border-bottom:1px solid var(--stone-200)}
+.tbl th:first-child{border-top-left-radius:var(--r-md)}
+.tbl th:last-child{border-top-right-radius:var(--r-md)}
+.tbl td{padding:13px 14px;border-bottom:1px solid var(--stone-200);vertical-align:top;line-height:1.7}
+.tbl td.num{text-align:right;font-variant-numeric:tabular-nums}
+.tbl tr:last-child td{border-bottom:none}
+
+.btn{font-family:inherit;font-size:16px;line-height:1.6;font-weight:500;
+  min-height:44px;padding:10px 20px;border-radius:var(--r-md);cursor:pointer;
+  border:1px solid transparent;display:inline-flex;align-items:center;gap:8px;
+  transition:background .15s ease,border-color .15s ease}
+.btn:focus-visible{outline:2px solid var(--pine-600);outline-offset:2px}
+.btn-primary{background:var(--pine-600);color:#fff}
+.btn-primary:hover{background:var(--pine-700)}
+.btn-primary:active{background:var(--pine-800)}
+.btn-secondary{background:var(--stone-0);color:var(--stone-800);border-color:var(--stone-300)}
+.btn-secondary:hover{background:var(--stone-100);border-color:var(--stone-400)}
+.btn-ghost{background:transparent;color:var(--pine-600);padding:10px 8px}
+.btn-ghost:hover{color:var(--pine-700);text-decoration:underline;text-underline-offset:3px}
+.btn:disabled{background:var(--stone-200);color:var(--stone-500);border-color:transparent;cursor:not-allowed}
+.btn-sm{min-height:36px;font-size:15px;padding:7px 14px}
+.btn-lg{min-height:52px;font-size:17px;padding:13px 26px}
+
+.tcard{background:var(--stone-0);border:1px solid var(--stone-200);border-radius:var(--r-lg);
+  overflow:hidden;display:flex;flex-direction:column;transition:border-color .15s ease,box-shadow .15s ease}
+.tcard:hover{border-color:var(--stone-400);box-shadow:var(--e2)}
+.tcard-img{aspect-ratio:4/3;background:var(--pine-100);position:relative}
+.tcard-img::after{content:"4 : 3";position:absolute;inset:0;display:flex;align-items:center;
+  justify-content:center;font-size:13px;color:var(--pine-600);letter-spacing:.08em}
+.tcard-body{padding:18px 20px 20px;display:flex;flex-direction:column;flex:1}
+.tcard-title{font-size:20px;line-height:1.5;font-weight:600;color:var(--stone-900);margin:6px 0 6px;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:60px}
+.tcard-ex{font-size:15px;line-height:1.75;color:var(--stone-600);margin:0 0 16px;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:52px}
+.tcard-spec{border-top:1px solid var(--stone-200);padding-top:12px;margin-top:auto;
+  display:grid;gap:7px;font-size:14px}
+.srow{display:flex;justify-content:space-between;gap:12px;align-items:baseline}
+.srow dt{color:var(--stone-600)}
+.srow dd{margin:0;font-weight:500;color:var(--stone-800);text-align:right;font-variant-numeric:tabular-nums}
+.badge{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:500;
+  padding:3px 9px;border-radius:var(--r-pill);background:var(--ok-50);color:var(--ok-500);
+  border:1px solid var(--ok-100)}
+
+.acc{background:var(--stone-0);border:1px solid var(--stone-200);border-radius:var(--r-lg);overflow:hidden}
+.acc details{border-bottom:1px solid var(--stone-200)}
+.acc details:last-child{border-bottom:none}
+.acc summary{list-style:none;cursor:pointer;padding:18px 22px;font-size:17px;line-height:1.7;
+  font-weight:500;color:var(--stone-900);display:flex;justify-content:space-between;gap:16px;align-items:flex-start}
+.acc summary::-webkit-details-marker{display:none}
+.acc summary:hover{background:var(--stone-50)}
+.acc summary:focus-visible{outline:2px solid var(--pine-600);outline-offset:-2px}
+.chev{flex:0 0 auto;width:20px;height:20px;margin-top:4px;color:var(--stone-500);transition:transform .18s ease}
+details[open] .chev{transform:rotate(180deg)}
+.acc .ans{padding:0 22px 20px;font-size:17px;line-height:1.8;color:var(--stone-700);max-width:66ch;margin:0}
+
+.callout{border-radius:var(--r-lg);padding:16px 20px;display:flex;gap:14px;align-items:flex-start}
+.callout h4{font-size:15px;line-height:1.6;font-weight:500;margin:0 0 4px}
+.callout p{margin:0;font-size:15px;line-height:1.75}
+.callout ul{margin:6px 0 0;padding-left:20px;font-size:15px;line-height:1.75}
+.co-warn{background:var(--warn-50);border:1px solid var(--warn-200)}
+.co-warn h4{color:var(--warn-600)}.co-warn p,.co-warn ul{color:var(--stone-800)}.co-warn .ico{color:var(--warn-400)}
+.co-danger{background:var(--danger-50);border:1px solid var(--danger-200)}
+.co-danger h4{color:var(--danger-600)}.co-danger p,.co-danger ul{color:var(--stone-800)}.co-danger .ico{color:var(--danger-400)}
+.co-info{background:var(--pine-50);border:1px solid var(--pine-200)}
+.co-info h4{color:var(--pine-700)}.co-info p,.co-info ul{color:var(--stone-800)}.co-info .ico{color:var(--pine-500)}
+.ico{flex:0 0 auto;width:20px;height:20px;margin-top:3px}
+
+.rev{background:var(--stone-100);border:1px solid var(--stone-200);border-radius:var(--r-lg);
+  padding:18px 20px;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.rev-av{width:52px;height:52px;border-radius:50%;background:var(--pine-200);flex:0 0 auto;
+  display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:500;color:var(--pine-700)}
+.rev-main{flex:1 1 260px;min-width:0}
+.rev-lbl{font-size:13px;line-height:1.6;color:var(--stone-600);margin:0}
+.rev-name{font-size:16px;line-height:1.6;font-weight:500;color:var(--pine-700);
+  text-decoration:none;margin:0}
+.rev-name:hover{text-decoration:underline;text-underline-offset:3px}
+.rev-meta{font-size:13px;line-height:1.6;color:var(--stone-600);margin:2px 0 0}
+.rev-date{font-size:13px;line-height:1.6;color:var(--stone-600);flex:0 0 auto;text-align:right}
+
+.scroller{overflow-x:auto;border:1px solid var(--stone-200);border-radius:var(--r-lg);background:var(--stone-0)}
+.ctbl{width:100%;min-width:640px;border-collapse:collapse;font-size:15px}
+.ctbl caption{text-align:left;padding:16px 18px 0;font-size:14px;color:var(--stone-600);line-height:1.7}
+.ctbl th{font-size:14px;font-weight:500;text-align:left;padding:12px 16px;background:var(--stone-100);
+  color:var(--stone-700);border-bottom:1px solid var(--stone-200);min-width:140px}
+.ctbl th[scope=row]{background:var(--stone-50);font-weight:500;color:var(--stone-800);
+  position:sticky;left:0;border-right:1px solid var(--stone-200)}
+.ctbl td{padding:13px 16px;border-bottom:1px solid var(--stone-200);line-height:1.7;
+  font-variant-numeric:tabular-nums}
+.ctbl tr:last-child th,.ctbl tr:last-child td{border-bottom:none}
+.spacer{display:flex;align-items:flex-end;gap:10px;flex-wrap:wrap}
+.spacer div{background:var(--pine-300);border-radius:2px}
+.spacer span{font-size:11px;color:var(--stone-600);display:block;text-align:center;margin-top:4px}
+.elev{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:20px}
+.elev div{background:var(--stone-0);border-radius:var(--r-lg);padding:20px;font-size:14px;
+  border:1px solid var(--stone-200);text-align:center}
+.note{background:var(--pine-50);border:1px solid var(--pine-200);border-radius:var(--r-lg);
+  padding:16px 20px;font-size:15px;line-height:1.75;color:var(--stone-800)}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+@media (max-width:600px){
+  h1{font-size:32px}h2{font-size:26px}h3{font-size:22px}
+  .wrap{padding:32px 18px 72px}
+  .rev-date{text-align:left;flex-basis:100%}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<p class="eyebrow">Design language v0.1</p>
+<h1>Ticha Clinic</h1>
+<p class="lede">ระบบสีและตัวอักษรสำหรับเว็บไซต์คลินิกเสริมความงาม ออกแบบให้อ่านเป็นสถานพยาบาลที่เชื่อถือได้ ไม่ใช่ร้านขายคอร์ส และรองรับเนื้อหาภาษาไทยที่ทีมคอนเทนต์แก้ไขเองผ่าน WordPress</p>
+
+<section>
+<div class="shead"><h2>1 สี</h2><span>Pine · Stone · Brass · Semantic</span></div>
+
+<p class="rname">Pine — primary สีหลักของแบรนด์ ใช้กับ CTA ลิงก์ และหัวข้อ</p>
+<div class="ramp">
+  <div class="sw" style="background:var(--pine-50);color:var(--pine-800)"><b>50</b>F1F5F3</div>
+  <div class="sw" style="background:var(--pine-100);color:var(--pine-800)"><b>100</b>DDE8E4</div>
+  <div class="sw" style="background:var(--pine-200);color:var(--pine-800)"><b>200</b>BCD1CA</div>
+  <div class="sw" style="background:var(--pine-300);color:var(--pine-900)"><b>300</b>92B3A9</div>
+  <div class="sw" style="background:var(--pine-400);color:#fff"><b>400</b>628F82</div>
+  <div class="sw" style="background:var(--pine-500);color:#fff"><b>500</b>3F6E60</div>
+  <div class="sw" style="background:var(--pine-600);color:#fff"><b>600</b>2D574B</div>
+  <div class="sw" style="background:var(--pine-700);color:#fff"><b>700</b>234439</div>
+  <div class="sw" style="background:var(--pine-800);color:#fff"><b>800</b>1A332B</div>
+  <div class="sw" style="background:var(--pine-900);color:#fff"><b>900</b>11221D</div>
+</div>
+
+<p class="rname">Stone — neutral โทนอุ่นเล็กน้อย ใช้กับพื้น เส้น และตัวอักษร</p>
+<div class="ramp">
+  <div class="sw" style="background:var(--stone-50);color:var(--stone-800)"><b>50</b>FAF9F7</div>
+  <div class="sw" style="background:var(--stone-100);color:var(--stone-800)"><b>100</b>F2F1ED</div>
+  <div class="sw" style="background:var(--stone-200);color:var(--stone-800)"><b>200</b>E4E2DC</div>
+  <div class="sw" style="background:var(--stone-300);color:var(--stone-900)"><b>300</b>CDCAC2</div>
+  <div class="sw" style="background:var(--stone-400);color:var(--stone-900)"><b>400</b>A5A199</div>
+  <div class="sw" style="background:var(--stone-500);color:#fff"><b>500</b>7F7B72</div>
+  <div class="sw" style="background:var(--stone-600);color:#fff"><b>600</b>605C55</div>
+  <div class="sw" style="background:var(--stone-700);color:#fff"><b>700</b>47443E</div>
+  <div class="sw" style="background:var(--stone-800);color:#fff"><b>800</b>302E2A</div>
+  <div class="sw" style="background:var(--stone-900);color:#fff"><b>900</b>1C1B18</div>
+</div>
+
+<p class="rname">Brass — accent ใช้เฉพาะ eyebrow และเส้นคั่นในตารางข้อมูล ห้ามใช้เป็นพื้น CTA</p>
+<div class="ramp">
+  <div class="sw" style="background:var(--brass-50);color:var(--brass-600)"><b>50</b>FAF6EA</div>
+  <div class="sw" style="background:var(--brass-100);color:var(--brass-600)"><b>100</b>F0E8CE</div>
+  <div class="sw" style="background:var(--brass-200);color:var(--brass-600)"><b>200</b>DCCF9B</div>
+  <div class="sw" style="background:var(--brass-300);color:var(--brass-600)"><b>300</b>C0AE63</div>
+  <div class="sw" style="background:var(--brass-400);color:#fff"><b>400</b>9E8C3E</div>
+  <div class="sw" style="background:var(--brass-500);color:#fff"><b>500</b>7C6D2C</div>
+  <div class="sw" style="background:var(--brass-600);color:#fff"><b>600</b>5D521F</div>
+</div>
+
+<p class="rname">Semantic — Warning ข้อควรระวัง · Danger ข้อห้าม · Success ยืนยันแล้ว</p>
+<div class="ramp">
+  <div class="sw" style="background:var(--warn-50);color:var(--warn-600)"><b>W50</b>FDF6E7</div>
+  <div class="sw" style="background:var(--warn-200);color:var(--warn-600)"><b>W200</b>EFCB79</div>
+  <div class="sw" style="background:var(--warn-400);color:#fff"><b>W400</b>B67F16</div>
+  <div class="sw" style="background:var(--warn-600);color:#fff"><b>W600</b>684809</div>
+  <div class="sw" style="background:var(--danger-50);color:var(--danger-600)"><b>D50</b>FCEFED</div>
+  <div class="sw" style="background:var(--danger-200);color:var(--danger-600)"><b>D200</b>E8A199</div>
+  <div class="sw" style="background:var(--danger-400);color:#fff"><b>D400</b>B23E30</div>
+  <div class="sw" style="background:var(--danger-600);color:#fff"><b>D600</b>6A1F17</div>
+  <div class="sw" style="background:var(--ok-50);color:var(--ok-600)"><b>S50</b>EEF5EF</div>
+  <div class="sw" style="background:var(--ok-200);color:var(--ok-600)"><b>S200</b>A6CBAB</div>
+  <div class="sw" style="background:var(--ok-400);color:#fff"><b>S400</b>47804F</div>
+  <div class="sw" style="background:var(--ok-600);color:#fff"><b>S600</b>254A2B</div>
+</div>
+</section>
+
+<section>
+<div class="shead"><h2>2 ตัวอักษร</h2><span>Noto Serif Thai + IBM Plex Sans Thai</span></div>
+<div class="spec">
+  <h1 style="margin-bottom:4px">ฟิลเลอร์ใต้ตากับการแก้ร่องน้ำตา</h1>
+  <p class="cap" style="margin:0 0 28px">h1 · Noto Serif Thai 600 · 40/1.35 · mobile 32</p>
+  <h2 style="margin-bottom:4px">ใครที่เหมาะและไม่เหมาะกับหัตถการนี้</h2>
+  <p class="cap" style="margin:0 0 28px">h2 · Noto Serif Thai 600 · 30/1.4 · mobile 26</p>
+  <h3 style="margin-bottom:4px">ขั้นตอนการรักษาและระยะเวลาพักฟื้น</h3>
+  <p class="cap" style="margin:0 0 28px">h3 · IBM Plex Sans Thai 600 · 24/1.45</p>
+  <h4 style="margin-bottom:4px">สิ่งที่ควรเตรียมก่อนเข้ารับบริการ</h4>
+  <p class="cap" style="margin:0 0 28px">h4 · IBM Plex Sans Thai 500 · 20/1.5</p>
+  <p class="lede" style="margin-bottom:4px;color:var(--stone-700)">ฟิลเลอร์ใต้ตาคือการฉีดสารเติมเต็มกลุ่มไฮยาลูรอนิกแอซิดเข้าไปในชั้นใต้ผิวบริเวณร่องน้ำตา เพื่อลดเงาคล้ำที่เกิดจากการยุบตัวของไขมันใต้ตา</p>
+  <p class="cap" style="margin:0 0 28px">body-lg · 18/1.8 · ใช้กับย่อหน้าสรุปที่ AI จะดึงไปตอบ</p>
+  <p style="margin:0 0 4px">เนื้อหาปกติขนาด 17 พิกเซล line-height 1.8 ซึ่งจำเป็นสำหรับภาษาไทยเพราะสระบนและวรรณยุกต์ต้องการพื้นที่แนวตั้งมากกว่าภาษาอังกฤษ หากตั้ง line-height ต่ำกว่า 1.7 สระอิ สระอี และวรรณยุกต์จะชนกับบรรทัดด้านบน</p>
+  <p class="cap" style="margin:0 0 28px">body · 17/1.8 · น้ำหนัก 400</p>
+  <p style="font-size:15px;line-height:1.75;color:var(--stone-700);margin:0 0 4px">ข้อความขนาดเล็กสำหรับคำอธิบายประกอบ รายละเอียดในการ์ด และเนื้อหารองที่ไม่ใช่เนื้อหาหลักของหน้า</p>
+  <p class="cap" style="margin:0 0 28px">body-sm · 15/1.75</p>
+  <p class="cap" style="margin:0 0 4px">ใบประกอบวิชาชีพเวชกรรม เลขที่ ว.12345 · อัปเดต 28 สิงหาคม 2569</p>
+  <p class="cap" style="margin:0 0 28px;color:var(--stone-500)">caption · 13/1.7</p>
+  <p class="eyebrow-th" style="margin:0 0 4px">หัตถการบริเวณรอบดวงตา</p>
+  <p class="cap" style="margin:0">eyebrow ไทย · 13/1.6 · 500 · ห้าม uppercase</p>
+</div>
+</section>
+
+<section>
+<div class="shead"><h2>3 ระยะห่าง มุม และเงา</h2><span>ฐาน 4 พิกเซล</span></div>
+<div class="spacer" style="margin-bottom:36px">
+  <div><div style="width:2px;height:2px;background:var(--pine-300)"></div><span>2</span></div>
+  <div><div style="width:4px;height:4px;background:var(--pine-300)"></div><span>4</span></div>
+  <div><div style="width:8px;height:8px;background:var(--pine-300)"></div><span>8</span></div>
+  <div><div style="width:12px;height:12px;background:var(--pine-300)"></div><span>12</span></div>
+  <div><div style="width:16px;height:16px;background:var(--pine-300)"></div><span>16</span></div>
+  <div><div style="width:20px;height:20px;background:var(--pine-300)"></div><span>20</span></div>
+  <div><div style="width:24px;height:24px;background:var(--pine-300)"></div><span>24</span></div>
+  <div><div style="width:32px;height:32px;background:var(--pine-300)"></div><span>32</span></div>
+  <div><div style="width:40px;height:40px;background:var(--pine-300)"></div><span>40</span></div>
+  <div><div style="width:48px;height:48px;background:var(--pine-300)"></div><span>48</span></div>
+  <div><div style="width:64px;height:64px;background:var(--pine-300)"></div><span>64</span></div>
+  <div><div style="width:80px;height:80px;background:var(--pine-300)"></div><span>80</span></div>
+  <div><div style="width:96px;height:96px;background:var(--pine-300)"></div><span>96</span></div>
+</div>
+<div class="elev">
+  <div style="box-shadow:none">e0 · none<br><span class="cap">การ์ดปกติ ใช้เส้นขอบ</span></div>
+  <div style="box-shadow:var(--e1)">e1<br><span class="cap">hover ของการ์ด</span></div>
+  <div style="box-shadow:var(--e2)">e2<br><span class="cap">dropdown, sticky bar</span></div>
+  <div style="box-shadow:var(--e3)">e3<br><span class="cap">modal เท่านั้น</span></div>
+</div>
+<p class="note" style="margin-top:24px">กฎเรื่องเงา: การ์ดในสถานะปกติใช้เส้นขอบ 1 พิกเซล ไม่ใช้เงา เพราะเงาเยอะทำให้หน้าเว็บดูเป็นอีคอมเมิร์ซ ไม่ใช่สถานพยาบาล และอนุญาต e3 ได้ไม่เกินหนึ่งชิ้นต่อหนึ่งหน้าจอ</p>
+</section>
+
+<section>
+<div class="shead"><h2>4 คอมโพเนนต์</h2><span>6 ตัว</span></div>
+
+<h3 style="margin-bottom:16px">4.1 Button</h3>
+<div class="spec" style="margin-bottom:16px">
+  <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-bottom:20px">
+    <button class="btn btn-primary">นัดหมายปรึกษาแพทย์</button>
+    <button class="btn btn-secondary">ดูรายละเอียดหัตถการ</button>
+    <button class="btn btn-ghost">อ่านข้อควรระวังทั้งหมด</button>
+    <button class="btn btn-primary" disabled>ปิดรับนัดชั่วคราว</button>
+  </div>
+  <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center">
+    <button class="btn btn-primary btn-sm">sm 36</button>
+    <button class="btn btn-primary">md 44</button>
+    <button class="btn btn-primary btn-lg">lg 52</button>
+    <button class="btn btn-secondary" style="max-width:240px">ปุ่มที่ข้อความไทยยาวจนขึ้นสองบรรทัดก็ยังไม่พัง</button>
+  </div>
+</div>
+<p class="cap" style="margin:0 0 12px">ใช้ min-height ไม่ใช่ height เพื่อให้ข้อความไทยสองบรรทัดไม่ล้นออกนอกปุ่ม · primary ได้หนึ่งปุ่มต่อหนึ่งบล็อกเท่านั้น · ห้ามใช้ข้อความประเภทลดราคาหรือโปรโมชั่นบนปุ่ม</p>
+
+<h3 style="margin:44px 0 16px">4.2 Treatment card</h3>
+<div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr))">
+  <article class="tcard">
+    <div class="tcard-img"></div>
+    <div class="tcard-body">
+      <span class="badge">ตรวจสอบโดยแพทย์</span>
+      <h4 class="tcard-title">ฟิลเลอร์ร่องน้ำตา</h4>
+      <p class="tcard-ex">เติมเต็มร่องใต้ตาที่ยุบตัว เพื่อลดเงาคล้ำและความดูโทรม</p>
+      <dl class="tcard-spec">
+        <div class="srow"><dt>ช่วงราคา</dt><dd>18,000–35,000 บาท</dd></div>
+        <div class="srow"><dt>ระยะเวลาทำ</dt><dd>30–45 นาที</dd></div>
+        <div class="srow"><dt>ระยะพักฟื้น</dt><dd>3–7 วัน</dd></div>
+      </dl>
+    </div>
+  </article>
+  <article class="tcard">
+    <div class="tcard-img"></div>
+    <div class="tcard-body">
+      <span class="badge">ตรวจสอบโดยแพทย์</span>
+      <h4 class="tcard-title">โบทูลินัมท็อกซินบริเวณหน้าผากและหางตา</h4>
+      <p class="tcard-ex">ลดริ้วรอยจากการแสดงออกทางสีหน้า โดยผลจะค่อยเห็นภายใน 3 ถึง 7 วันหลังการรักษา</p>
+      <dl class="tcard-spec">
+        <div class="srow"><dt>ช่วงราคา</dt><dd>7,500–14,000 บาท</dd></div>
+        <div class="srow"><dt>ระยะเวลาทำ</dt><dd>15–20 นาที</dd></div>
+        <div class="srow"><dt>ระยะพักฟื้น</dt><dd>ไม่ต้องพักฟื้น</dd></div>
+      </dl>
+    </div>
+  </article>
+</div>
+<p class="cap" style="margin:12px 0 0">การ์ดสองใบนี้จงใจใส่ชื่อยาวไม่เท่ากันเพื่อพิสูจน์ว่า grid ไม่เหลื่อม ชื่อจำกัด 2 บรรทัดด้วย line-clamp และสำรองความสูงไว้ ตารางข้อมูลจึงยึดขอบล่างเสมอ</p>
+
+<h3 style="margin:44px 0 16px">4.3 FAQ accordion</h3>
+<div class="acc">
+  <details open>
+    <summary>ฟิลเลอร์ร่องน้ำตาอยู่ได้นานเท่าไหร่
+      <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+    </summary>
+    <p class="ans">โดยทั่วไปอยู่ได้ประมาณ 9 ถึง 18 เดือน ขึ้นอยู่กับชนิดของฟิลเลอร์ ปริมาณที่ใช้ อัตราการเผาผลาญของแต่ละบุคคล และพฤติกรรมการใช้ชีวิต ผู้ที่ออกกำลังกายหนักสม่ำเสมอมักสลายเร็วกว่าค่าเฉลี่ย</p>
+  </details>
+  <details open>
+    <summary>ต้องงดอะไรก่อนเข้ารับการรักษา
+      <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+    </summary>
+    <p class="ans">งดยาและอาหารเสริมที่มีผลต่อการแข็งตัวของเลือด เช่น แอสไพริน วิตามินอี น้ำมันปลา อย่างน้อย 7 วัน และงดแอลกอฮอล์ 24 ชั่วโมงก่อนเข้ารับบริการ กรุณาแจ้งแพทย์หากมีโรคประจำตัวหรือกำลังใช้ยาใดอยู่</p>
+  </details>
+  <details open>
+    <summary>ระหว่างตั้งครรภ์หรือให้นมบุตรทำได้หรือไม่
+      <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+    </summary>
+    <p class="ans">ไม่แนะนำ เนื่องจากยังไม่มีข้อมูลความปลอดภัยเพียงพอในกลุ่มผู้ตั้งครรภ์และให้นมบุตร แนะนำให้เลื่อนออกไปก่อนและปรึกษาแพทย์เมื่อพร้อม</p>
+  </details>
+</div>
+<p class="cap" style="margin:12px 0 0">ใช้ details กับ summary ซึ่ง render คำตอบลงใน HTML จริงตั้งแต่แรก ไม่ใช่ซ่อนด้วย JavaScript จุดนี้สำคัญเพราะ AI crawler ส่วนใหญ่ไม่รัน JavaScript ถ้าคำตอบไม่อยู่ใน HTML จะไม่ถูกดึงไปตอบ</p>
+
+<h3 style="margin:44px 0 16px">4.4 Comparison table</h3>
+<div class="scroller">
+  <table class="ctbl">
+    <caption>เปรียบเทียบสารเติมเต็มบริเวณร่องน้ำตาสามชนิดที่คลินิกให้บริการ</caption>
+    <thead><tr><th scope="col">หัวข้อ</th><th scope="col">ไฮยาลูรอนิกแอซิด</th><th scope="col">ไขมันตัวเอง</th><th scope="col">คอลลาเจนกระตุ้น</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">ระยะเวลาคงอยู่</th><td>9–18 เดือน</td><td>ถาวรบางส่วน</td><td>18–24 เดือน</td></tr>
+      <tr><th scope="row">ระยะพักฟื้น</th><td>3–7 วัน</td><td>10–14 วัน</td><td>2–5 วัน</td></tr>
+      <tr><th scope="row">ช่วงราคา</th><td>18,000–35,000</td><td>45,000–80,000</td><td>25,000–40,000</td></tr>
+      <tr><th scope="row">สลายกลับได้</th><td>ได้</td><td>ไม่ได้</td><td>ไม่ได้</td></tr>
+    </tbody>
+  </table>
+</div>
+<p class="cap" style="margin:12px 0 0">เป็น table จริงพร้อม th scope และ caption เพราะ LLM ดึงตารางไปอ้างอิงบ่อยกว่าเนื้อความ · คอลัมน์แรก sticky บนมือถือ · ตัวเลขใช้ tabular-nums จึงเรียงตรงกันทุกแถว</p>
+
+<h3 style="margin:44px 0 16px">4.5 Callout ข้อควรระวัง</h3>
+<div class="grid">
+  <div class="callout co-warn">
+    <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg>
+    <div><h4>ข้อควรระวัง</h4>
+    <ul><li>อาจมีรอยช้ำหรือบวมบริเวณที่ฉีดในช่วง 3 ถึง 7 วันแรก</li><li>หลีกเลี่ยงการนวดหรือกดบริเวณใต้ตาเป็นเวลา 2 สัปดาห์</li></ul></div>
+  </div>
+  <div class="callout co-danger">
+    <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8.5 8.5l7 7M15.5 8.5l-7 7"/></svg>
+    <div><h4>ข้อห้าม</h4>
+    <ul><li>ผู้ที่มีการติดเชื้อหรือแผลเปิดบริเวณที่จะฉีด</li><li>ผู้ที่แพ้ไฮยาลูรอนิกแอซิดหรือยาชากลุ่มลิโดเคน</li><li>ผู้ที่ตั้งครรภ์หรือให้นมบุตร</li></ul></div>
+  </div>
+  <div class="callout co-info">
+    <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 7.5h.01"/></svg>
+    <div><h4>ข้อมูลประกอบการตัดสินใจ</h4>
+    <p>ผลลัพธ์แตกต่างกันในแต่ละบุคคล ขึ้นอยู่กับโครงหน้า สภาพผิว และการดูแลหลังการรักษา ควรเข้ารับการประเมินจากแพทย์ก่อนทุกครั้ง</p></div>
+  </div>
+</div>
+<p class="cap" style="margin:12px 0 0">มีเพียงสาม variant คือ warning, danger, info · ไม่มี variant success สำหรับพูดถึงผลลัพธ์ เพราะจะกลายเป็นการรับรองผลซึ่งผิดกฎหมาย · ใช้เส้นขอบครบสี่ด้าน ไม่ใช้เส้นข้างเดียวคู่กับมุมโค้ง</p>
+
+<h3 style="margin:44px 0 16px">4.6 แถบผู้ตรวจสอบเนื้อหา</h3>
+<div class="rev">
+  <div class="rev-av">พญ</div>
+  <div class="rev-main">
+    <p class="rev-lbl">ตรวจสอบความถูกต้องของเนื้อหาโดย</p>
+    <a class="rev-name" href="#">แพทย์หญิงธิชา วรรณโสภณ</a>
+    <p class="rev-meta">ใบประกอบวิชาชีพเวชกรรม เลขที่ ว.12345 · ตจวิทยา</p>
+  </div>
+  <div class="rev-date">อัปเดตล่าสุด<br>28 สิงหาคม 2569</div>
+</div>
+<p class="cap" style="margin:12px 0 0">แถบนี้คือหลักฐาน E-E-A-T ของหน้าเนื้อหาทางการแพทย์ และแมปตรงเข้า JSON-LD ทั้ง reviewedBy ที่เป็น Physician และ dateModified · บนจอแคบวันที่จะตกลงมาบรรทัดใหม่</p>
+</section>
+
+<section>
+<div class="shead"><h2>5 สัดส่วนรูปภาพที่ล็อกไว้</h2><span>ทีมคอนเทนต์อัปโหลดขนาดใดก็ไม่พัง</span></div>
+<table class="tbl">
+  <thead><tr><th>ตำแหน่ง</th><th>อัตราส่วน</th><th>ขนาดที่แนะนำ</th></tr></thead>
+  <tbody>
+    <tr><td>การ์ดหัตถการ</td><td>4 : 3</td><td class="num">1200 × 900</td></tr>
+    <tr><td>ภาพหัวหน้าหัตถการ</td><td>16 : 9</td><td class="num">1920 × 1080</td></tr>
+    <tr><td>ภาพแพทย์</td><td>3 : 4</td><td class="num">900 × 1200</td></tr>
+    <tr><td>ภาพสาขา</td><td>3 : 2</td><td class="num">1500 × 1000</td></tr>
+    <tr><td>ภาพบทความ</td><td>16 : 9</td><td class="num">1600 × 900</td></tr>
+    <tr><td>Open Graph</td><td>1.91 : 1</td><td class="num">1200 × 630</td></tr>
+  </tbody>
+</table>
+</section>
+
+</div>
+</body>
+</html>
